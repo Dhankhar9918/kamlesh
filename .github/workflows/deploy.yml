@@ -21,11 +21,11 @@ jobs:
 
     - name: Build Docker image
       run: |
-        docker build -t ${{ secrets.DOCKERHUB_USERNAME }}/static-site:latest .
+        docker build -t ${{ secrets.DOCKERHUB_USERNAME }}/myweb:latest .
 
     - name: Push Docker image to Docker Hub
       run: |
-        docker push ${{ secrets.DOCKERHUB_USERNAME }}/static-site:latest
+        docker push ${{ secrets.DOCKERHUB_USERNAME }}/myweb:latest
     - name: Stop and remove old container (if exists)
       run: |
         docker stop static-site || true

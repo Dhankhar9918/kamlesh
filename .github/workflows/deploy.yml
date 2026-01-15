@@ -63,11 +63,11 @@ jobs:
             docker pull dhankhar9918/myweb:dheeraj
 
             echo "Stopping and removing old container (if exists)..."
-            docker stop flipkart-container || true
-            docker rm flipkart-container || true
+            docker stop myweb-container || true
+            docker rm myweb-container || true
 
             echo "Running NEW container..."
-            docker run -d --name flipkart-container -p 80:8080 dhankhar9918/myweb:dheeraj
+            docker run -d --name myweb-container -p 80:8080 dhankhar9918/myweb:dheeraj
           EOF
 
 
